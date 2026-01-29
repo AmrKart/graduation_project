@@ -1,0 +1,395 @@
+
+.ads {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.btnq {
+  height: fit-content !important;
+  margin: auto !important;
+  border: none !important;
+  color: #1B4376 !important;
+  background: transparent !important;
+  padding: 8px 12px !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+}
+
+.btnq:hover {
+  transform: scale(1.04, 1.04) !important;
+  background-color: #1B4376 !important;
+  color: white !important;
+}
+
+.ww {
+  border: 1px solid #1B4376 !important;
+  color: #1B4376 !important;
+  background: transparent !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  margin: 0 4px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  white-space: nowrap !important;
+  font-weight: 500 !important;
+}
+
+.ww:hover {
+  background-color: #1B4376 !important;
+  color: white !important;
+  transform: scale(1.05) !important;
+}
+
+.ww_active {
+  background-color: #1B4376 !important;
+  color: white !important;
+  border-color: #1B4376 !important;
+}
+
+.effect:hover {
+  transition: all ease-in-out 0.4s !important;
+  transform: scale(1.2, 1.2) !important;
+  color: #350909 !important;
+}
+
+/* Wrapper container for better layout control */
+.tabs-wrapper-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Override react-tabs-scrollable default styles */
+.react-tabs-scrollable__tabs-container .ads {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-wrap: nowrap !important;
+}
+
+.react-tabs-scrollable__tabs-container .btnq {
+  height: fit-content !important;
+  margin: auto !important;
+  border: none !important;
+  color: #1B4376 !important;
+  background: transparent !important;
+  padding: 8px 12px !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+  flex-shrink: 0 !important;
+  z-index: 10 !important;
+}
+
+.react-tabs-scrollable__tabs-container .ww {
+  border: 1px solid #1B4376 !important;
+  color: #1B4376 !important;
+  background: transparent !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  margin: 0 4px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  white-space: nowrap !important;
+  font-weight: 500 !important;
+  flex-shrink: 0 !important;
+}
+
+.react-tabs-scrollable__tabs-container .ww_active {
+  background-color: #1B4376 !important;
+  color: white !important;
+  border-color: #1B4376 !important;
+}
+
+/* Additional specific overrides for react-tabs-scrollable */
+.react-tabs-scrollable__tabs-container button.btnq {
+  height: fit-content !important;
+  margin: auto !important;
+  border: none !important;
+  color: #1B4376 !important;
+  background: transparent !important;
+  padding: 8px 12px !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: none !important;
+  outline: none !important;
+  flex-shrink: 0 !important;
+  z-index: 10 !important;
+}
+
+.react-tabs-scrollable__tabs-container button.btnq:hover {
+  transform: scale(1.04, 1.04) !important;
+  background-color: #1B4376 !important;
+  color: white !important;
+}
+
+.react-tabs-scrollable__tabs-container button.ww {
+  border: 1px solid #1B4376 !important;
+  color: #1B4376 !important;
+  background: transparent !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  margin: 0 4px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  white-space: nowrap !important;
+  font-weight: 500 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  flex-shrink: 0 !important;
+}
+
+.react-tabs-scrollable__tabs-container button.ww:hover {
+  background-color: #1B4376 !important;
+  color: white !important;
+  transform: scale(1.05) !important;
+}
+
+.react-tabs-scrollable__tabs-container button.ww_active {
+  background-color: #1B4376 !important;
+  color: white !important;
+  border-color: #1B4376 !important;
+}
+
+/* Override any Bootstrap or global button styles */
+.react-tabs-scrollable__tabs-container .btnq,
+.react-tabs-scrollable__tabs-container .ww {
+  display: inline-block !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  user-select: none !important;
+  line-height: 1.5 !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  box-sizing: border-box !important;
+}
+
+/* Style the navigation arrows */
+.react-tabs-scrollable__tabs-container .btnq i {
+  color: #1B4376 !important;
+  transition: all 0.3s ease !important;
+}
+
+.react-tabs-scrollable__tabs-container .btnq:hover i {
+  color: white !important;
+}
+
+/* Ensure navigation buttons are always visible and clickable */
+.react-tabs-scrollable__tabs-container .btnq {
+  position: relative !important;
+  z-index: 100 !important;
+  pointer-events: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Force navigation buttons to be visible on all screen sizes */
+.react-tabs-scrollable__tabs-container .btnq[style*="display: none"],
+.react-tabs-scrollable__tabs-container .btnq[style*="visibility: hidden"],
+.react-tabs-scrollable__tabs-container .btnq[style*="opacity: 0"] {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure the tabs container layout is correct */
+.react-tabs-scrollable__tabs-container {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  gap: 10px !important;
+  padding: 10px 0 !important;
+  flex-wrap: nowrap !important;
+}
+
+/* Style the tabs wrapper to take remaining space */
+.react-tabs-scrollable__tabs-wrapper {
+  flex: 1 !important;
+  display: flex !important;
+  gap: 8px !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  padding: 0 10px !important;
+}
+
+/* Hide scrollbar but keep functionality */
+.react-tabs-scrollable__tabs-wrapper::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Ensure navigation buttons are positioned correctly */
+.react-tabs-scrollable__tabs-container > button:first-child {
+  order: 1 !important;
+  flex-shrink: 0 !important;
+}
+
+.react-tabs-scrollable__tabs-container > button:last-child {
+  order: 3 !important;
+  flex-shrink: 0 !important;
+}
+
+.react-tabs-scrollable__tabs-wrapper {
+  order: 2 !important;
+  flex: 1 !important;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .react-tabs-scrollable__tabs-container {
+    gap: 5px !important;
+  }
+  
+  .react-tabs-scrollable__tabs-container .btnq {
+    padding: 6px 8px !important;
+    font-size: 14px !important;
+    min-width: 35px !important;
+    min-height: 35px !important;
+  }
+  
+  .react-tabs-scrollable__tabs-container .ww {
+    padding: 6px 12px !important;
+    font-size: 14px !important;
+    margin: 0 2px !important;
+  }
+  
+  .react-tabs-scrollable__tabs-wrapper {
+    gap: 4px !important;
+    padding: 0 5px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .react-tabs-scrollable__tabs-container {
+    gap: 3px !important;
+  }
+  
+  .react-tabs-scrollable__tabs-container .btnq {
+    padding: 4px 6px !important;
+    font-size: 12px !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
+  }
+  
+  .react-tabs-scrollable__tabs-container .ww {
+    padding: 4px 8px !important;
+    font-size: 12px !important;
+    margin: 0 1px !important;
+  }
+  
+  .react-tabs-scrollable__tabs-wrapper {
+    gap: 2px !important;
+    padding: 0 3px !important;
+  }
+}
+
+/* Tabs container with navigation - horizontal layout */
+.tabs-container-with-nav {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  width: 100% !important;
+  position: relative !important;
+}
+
+/* Manual navigation buttons styling - hidden by default on large screens */
+.manual-nav-btn {
+  border: 1px solid #1B4376 !important;
+  color: #1B4376 !important;
+  background: transparent !important;
+  padding: 8px 12px !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  font-size: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  flex-shrink: 0 !important;
+  z-index: 10 !important;
+}
+
+.manual-nav-btn:hover {
+  background-color: #1B4376 !important;
+  color: white !important;
+  transform: scale(1.05) !important;
+}
+
+.manual-nav-btn i {
+  color: inherit !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Hide navigation buttons on large screens */
+.mobile-only {
+  display: none !important;
+}
+
+/* Manual tabs wrapper styling - updated for flex layout */
+.manual-tabs-wrapper {
+  display: flex !important;
+  gap: 8px !important;
+  overflow-x: auto !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  -webkit-overflow-scrolling: touch !important;
+  padding: 10px 0 !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  flex: 1 !important;
+}
+
+.manual-tabs-wrapper::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Show navigation buttons only on small screens */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: flex !important;
+  }
+  
+  .tabs-container-with-nav {
+    gap: 5px !important;
+  }
+  
+  .manual-nav-btn {
+    padding: 6px 8px !important;
+    font-size: 14px !important;
+    min-width: 35px !important;
+    min-height: 35px !important;
+  }
+  
+  .manual-tabs-wrapper {
+    gap: 4px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs-container-with-nav {
+    gap: 3px !important;
+  }
+  
+  .manual-nav-btn {
+    padding: 4px 6px !important;
+    font-size: 12px !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
+  }
+  
+  .manual-tabs-wrapper {
+    gap: 2px !important;
+  }
+}

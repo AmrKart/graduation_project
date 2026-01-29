@@ -1,0 +1,22 @@
+.license-plate-info {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.sequence-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.sequence-label {
+    font-size: 0.9rem;
+    color: #495057;
+    font-weight: 500;
+}
+.sequence-separator {
+    color: #6c757d;
+    font-weight: 600;
+}
