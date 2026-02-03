@@ -6,6 +6,7 @@ import layoutSaga from "./layout/saga"
 import usersSaga from "./users/saga"
 import carMakesSaga from "./carMakes/saga"
 import carModelsSaga from "./carModels/saga"
+import qaSaga from "./Q&A/saga"
 
 //dontRemoveMeSagaImport
 
@@ -16,5 +17,6 @@ export default function* rootSaga() {
     fork(usersSaga),
     fork(carMakesSaga),
     fork(carModelsSaga),
+    fork(qaSaga),
   ])
 }

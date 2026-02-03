@@ -479,6 +479,22 @@ export default {
         en: "Car Make Id",
         ar: "معرف الماركة الرئيسية"
     },
+    "questionTitle": {
+        en: "Question title",
+        ar: "عنوان السؤال"
+    },  
+    "carName": {
+        en: "Car name",
+        ar: "اسم المركبة"
+    },
+    "userName": {
+        en: "User name",
+        ar: "اسم المستخدم"
+    },
+    "answersCount": {
+        en: "Answers count",
+        ar: "عدد الاجابات"
+    },
     "surename": {
         en: "Sure name",
         ar: "اللقب"
@@ -2703,6 +2719,26 @@ export default {
         en: "Status",
         ar: "الحالة"
     },
+    "reviews": {
+        en: "Reviews",
+        ar: "التقييمات"
+    },
+    "questions": {
+        en: "Questions",
+        ar: "الاسئلة"
+    },
+    "community": {
+        en: "Community",
+        ar: "المجتمع"
+    },
+    "rating": {
+        en: "Rating",
+        ar: "التقييم"
+    },
+    "trim_name": {
+        en: "Trim Name",
+        ar: "اسم الفئة"
+    },
     "fineBook": {
         en: "Fine book",
         ar: "دفتر الغرامات"
@@ -2802,11 +2838,7 @@ export default {
     "officer": {
         en: "officer",
         ar: "الضابط"
-    },
-    "userName": {
-        en: "User name",
-        ar: "اسم المستخدم"
-    },
+    },    
     "officers": {
         en: "Officers",
         ar: "الضباط"

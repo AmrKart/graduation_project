@@ -35,6 +35,13 @@ export const UPDATE_CAR_MODEL = "/admin/car-models/:id";
 export const DELETE_CAR_MODEL = "/admin/car-models/:id";
 //============================Car-Models===============================
 
+//============================Q&A===============================
+export const GET_ALL_QUESTIONS = "/admin/community/questions";
+export const DELETE_QUESTION = "/admin/community/questions/:id";
+export const DELETE_ANSWER = "/admin/community/answers/:id";
+export const GET_ALL_REVIEWS = "/admin/community/reviews";
+export const UPDATE_REVIEW_STATUS = "/admin/community/reviews/:id/status";
+//============================Q&A===============================
 //dontRemoveMeUrl
 
 

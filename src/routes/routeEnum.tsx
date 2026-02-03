@@ -9,4 +9,7 @@ export enum ShamcarRoutes {
   ADMINS= '/admins',
   CAR_MODELS = '/car-models',
   CAR_MAKES = '/car-makes',
+  REVIEWS = '/reviews',
+  QUESTIONS = '/questions',
+  
 }

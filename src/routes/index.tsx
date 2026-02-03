@@ -9,6 +9,8 @@ import UsersPage from '@@/pages/users';
 import AdminsPage from '@@/pages/Admins';
 import CarMakesPage from '@@/pages/CarMakes';
 import CarModelPage from '@@/pages/CarModels';
+import QuestionsPage from '@@/pages/Community/questionsPage';
+import ReviewsPage from '@@/pages/Community/reviewsPage';
 
 
 const authProtectedRoutes = [
@@ -18,7 +20,8 @@ const authProtectedRoutes = [
   { path: ShamcarRoutes.ADMINS, component: <AdminsPage /> },
   { path: ShamcarRoutes.CAR_MAKES, component: <CarMakesPage /> },
   { path: ShamcarRoutes.CAR_MODELS, component: <CarModelPage /> },
-
+  { path: ShamcarRoutes.REVIEWS, component: <ReviewsPage /> },
+  { path: ShamcarRoutes.QUESTIONS, component: <QuestionsPage /> },
   {
     path: '/*',
     exact: true,

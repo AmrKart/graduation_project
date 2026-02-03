@@ -230,6 +230,20 @@ const SidebarContent = (props) => {
                 </Link>
               </li>
 
+              <li className="menu-title">{translate('community')} </li>
+              <li>
+                <Link to={ShamcarRoutes.REVIEWS}>
+                  <i className="bx bx-star"></i>
+                  <span>{translate("reviews")}</span>
+                </Link>
+              </li>
+              <li>
+                <Link to={ShamcarRoutes.QUESTIONS}>
+                  <i className="bx bx-question-mark"></i>
+                  <span>{translate("questions")}</span>
+                </Link>
+              </li>
+
             </div>
 
 
