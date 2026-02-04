@@ -204,6 +204,7 @@ const UsersPage = () => {
                         onView={(row: any, id: any) => {
                             // prefer row.id, otherwise fallback to id
                             const userId = (row && row.id) ? row.id : id;
+                            
                             setComponent(
                                 <ViewUserDetailsModal
                                     userId={String(userId)}
