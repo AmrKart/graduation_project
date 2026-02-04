@@ -60,7 +60,7 @@ const QuestionsPage = () => {
                         actions={{ enabled: true, renderHtml: null }}
                         rowId="id"
                         options={{
-                            searching: false,
+                            searching: true,
                         }}
                         onView={(row: any) => {
                             // prefer row.id, otherwise fallback to id

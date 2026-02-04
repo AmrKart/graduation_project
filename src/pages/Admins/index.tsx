@@ -67,7 +67,7 @@ const AdminsPage = () => {
                         actions={{ enabled: false, renderHtml: null }}
                         rowId="id"
                         options={{
-                            searching: false,
+                            searching: true,
                         }}                        
                     />
                 </div>                

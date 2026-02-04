@@ -76,7 +76,7 @@ const CarModelPage = () => {
                         actions={{ enabled: true, renderHtml: null }}
                         rowId="id"
                         options={{
-                            searching: false,
+                            searching: true,
                         }}
                         onView={(row: any, id: any) => {
                             // prefer row.id, otherwise fallback to id

@@ -91,7 +91,9 @@ const DataTableContainer = forwardRef<DataTableRef, DataTableContainerProps>(
         const builtColumns = React.useMemo(() => {
             const cols = columns.map((col: any) => ({
                 ...col,
-                className: col.className || (isRtl ? "text-start" : "text-end")
+                className: col.className || (isRtl ? "text-start" : "text-end"),
+                searchable: col.searchable !== undefined ? col.searchable : true,
+                orderable: col.orderable !== undefined ? col.orderable : true,
             }));
 
             if (actions && actions.enabled) {
@@ -335,67 +337,90 @@ const DataTableContainer = forwardRef<DataTableRef, DataTableContainerProps>(
                             }
                         }
                     }
-                } catch (error) {
-                    console.warn('initComplete fallback', error);
-                }
-            },
-            drawCallback: function () {
-                const api = this.api?.();
-                if (api) {
-                    // Re-attach event listeners after each draw
-                    attachEventListeners(api);
-                }
-            },
-            preDrawCallback: function () {
-                try {
+                    const filterDiv = container.querySelector('.dt-search');                                        
+                    if (filterDiv) {
+                        if (i18n.language === 'ar') {
+                            filterDiv.classList.add('d-flex', 'justify-content-end');
+                        } else {
+                            filterDiv.classList.add('d-flex', 'justify-content-end');
+                        }
+                        const searchInput = filterDiv.querySelector('input[type="search"]');
+                        if (searchInput) {                            
+                            searchInput.classList.add('form-control', 'form-control-lg');
+                            // Add custom styles
+                            (searchInput as HTMLElement).style.width = '50%';
+                            (searchInput as HTMLElement).style.borderRadius = '8px';                                                        
+                            (searchInput as HTMLElement).style.backgroundColor = '#2a3042';                                                        
+                            (searchInput as HTMLElement).style.color = '#fff';                                                                                    
+                            searchInput.placeholder = translate('search');
+                        }
+                        const label = filterDiv.querySelector('label');
+                        if (label) {
+                            label.style.display = 'none';
+                        }
+                    }
+
+                    } catch (error) {
+                        console.warn('initComplete fallback', error);
+                    }
+                },
+                drawCallback: function () {
                     const api = this.api?.();
-                    if (!api) return;
+                    if (api) {
+                        // Re-attach event listeners after each draw
+                        attachEventListeners(api);
+                    }
+                },
+                preDrawCallback: function () {
+                    try {
+                        const api = this.api?.();
+                        if (!api) return;
 
-                    const container = api.table?.().container?.();
-                    if (!container) return;
+                        const container = api.table?.().container?.();
+                        if (!container) return;
 
-                    const proc = container.querySelector('.dataTables_processing, .dt-processing');
-                    const proc2 = container.querySelector('.flag');
-                    if (proc) {
-                        proc.classList.remove('card', 'dt-processing');
-                        proc.classList.add('d-flex', 'justify-content-center', 'align-items-center', 'flag');
-                        (proc as HTMLElement).style.height = 'auto';
-                        proc.innerHTML = `<div class="spinner-border text-info m-5" role="status">
+                        const proc = container.querySelector('.dataTables_processing, .dt-processing');
+                        const proc2 = container.querySelector('.flag');
+                        if (proc) {
+                            proc.classList.remove('card', 'dt-processing');
+                            proc.classList.add('d-flex', 'justify-content-center', 'align-items-center', 'flag');
+                            (proc as HTMLElement).style.height = 'auto';
+                            proc.innerHTML = `<div class="spinner-border text-info m-5" role="status">
                                     <span class="visually-hidden">Loading...</span>
                                   </div>`;
-                    }
-                    if (proc2) {
-                        if (proc2.classList.contains('d-flex')) {
-                            proc2.classList.remove('d-flex');
-                            proc2.classList.add('d-none');
                         }
-                        else if (proc2.classList.contains('d-none')) {
-                            proc2.classList.remove('d-none');
-                            proc2.classList.add('d-flex');
+                        if (proc2) {
+                            if (proc2.classList.contains('d-flex')) {
+                                proc2.classList.remove('d-flex');
+                                proc2.classList.add('d-none');
+                            }
+                            else if (proc2.classList.contains('d-none')) {
+                                proc2.classList.remove('d-none');
+                                proc2.classList.add('d-flex');
+                            }
                         }
-                    }
 
-                    const rowBefore = container.querySelector('.row');
-                    const rowAfter = container.querySelector('.rowFlag');
-                    const tableStripedBefore = container.querySelector('.dataTable');
-                    const tableStripedAfter = container.querySelector('.tableFlag');
+                        const rowBefore = container.querySelector('.row');
+                        const rowAfter = container.querySelector('.rowFlag');
+                        const tableStripedBefore = container.querySelector('.dataTable');
+                        const tableStripedAfter = container.querySelector('.tableFlag');
 
-                    if (rowBefore) {
-                        rowBefore.classList.add('d-none', 'rowFlag');
+                        if (rowBefore) {
+                            rowBefore.classList.add('d-none', 'rowFlag');
+                        }
+                        if (tableStripedBefore) {
+                            tableStripedBefore.classList.add('d-none', 'tableFlag');
+                        }
+                        if (rowAfter) {
+                            rowAfter.classList.remove('d-none');
+                        }
+                        if (tableStripedAfter) {
+                            tableStripedAfter.classList.remove('d-none');
+                        }
+                    } catch (error) {
+                        console.warn('preDrawCallback fallback', error);
                     }
-                    if (tableStripedBefore) {
-                        tableStripedBefore.classList.add('d-none', 'tableFlag');
-                    }
-                    if (rowAfter) {
-                        rowAfter.classList.remove('d-none');
-                    }
-                    if (tableStripedAfter) {
-                        tableStripedAfter.classList.remove('d-none');
-                    }
-                } catch (error) {
-                    console.warn('preDrawCallback fallback', error);
-                }
-            },
+                },
             ...options
         };
 
