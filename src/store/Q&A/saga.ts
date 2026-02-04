@@ -8,7 +8,7 @@ import * as url from "@@/helpers/url_helper"
 import { SagaPayload } from "@@/common/types/sagaPayload"
 import { ErrorMode, SuccessMode } from "@@/common/types/axiosRequest"
 import { executeActions } from "@@/helpers/executeActionsHelper"
-import { jsonToIQuestion, jsonToIReview } from "@@/interfaces/Q&A"
+import { jsonToIAnswer, jsonToIQuestion, jsonToIReview } from "@@/interfaces/Q&A"
 
 
 function* getAllQuestions(action: SagaPayload<any>) {
@@ -69,7 +69,7 @@ function* updateReviewStatus(action: SagaPayload<any>) {
     try {
         const response: Response<JObject> = yield call(
             axios.post,
-            url.UPDATE_REVIEW_STATUS.replace(":id", action.payload.data.id),
+            url.UPDATE_REVIEW_STATUS.replace(":id", action.payload?.data?.id ?? ""),
             action.payload.data,
             {success: SuccessMode.message, error: ErrorMode.message}
         )
@@ -81,6 +81,35 @@ function* updateReviewStatus(action: SagaPayload<any>) {
 }
 //============================================================================
 
+function* getAllAnswers(action: SagaPayload<any>) {
+    try {
+        const response: Response<JObject> = yield call(
+            axios.get,
+            url.GET_ALL_ANSWERS.replace(":id",action.payload?.data?.id ?? ''),
+            {success: SuccessMode.none, error: ErrorMode.page}
+        )
+        yield put(actions.getAllAnswersSuccess(response.data?.items?.map(jsonToIAnswer)))
+    } catch (error) {
+        yield put(actions.getAllAnswersFailed(error))
+    }
+}
+//============================================================================
+function* addAnswer(action: SagaPayload<any>) {
+    try {
+        const response: Response<JObject> = yield call(
+            axios.post,
+            url.ADD_ANSWER.replace(":id", action.payload?.data?.id ?? ""),
+            action.payload.data,
+            {success: SuccessMode.message, error: ErrorMode.message}
+        )
+        yield put(actions.addAnswerSuccess(response.data))
+        yield executeActions(action.payload?.methods || [])
+    } catch (error) {
+        yield put(actions.addAnswerFailed(error))
+    }
+}
+//============================================================================
+
 
 function* qaSaga() {
     yield takeEvery(actionsName.GET_ALL_QUESTIONS, getAllQuestions)
@@ -88,5 +117,7 @@ function* qaSaga() {
     yield takeEvery(actionsName.DELETE_ANSWER, deleteAnswer)
     yield takeEvery(actionsName.GET_ALL_REVIEWS, getAllReviews)
     yield takeEvery(actionsName.UPDATE_REVIEW_STATUS, updateReviewStatus)
+    yield takeEvery(actionsName.GET_ALL_ANSWERS, getAllAnswers)
+    yield takeEvery(actionsName.ADD_ANSWER, addAnswer)
 }
 export default qaSaga

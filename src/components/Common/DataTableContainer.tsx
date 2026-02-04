@@ -35,6 +35,7 @@ interface DataTableContainerProps {
     onDelete?: (row: any, id: any) => void;
     reloadTrigger?: any;
     options?: any;
+    showItemsPerPage?: boolean;
 }
 
 export type DataTableRef = {
@@ -56,7 +57,8 @@ const DataTableContainer = forwardRef<DataTableRef, DataTableContainerProps>(
             onView,
             onDelete,
             reloadTrigger,
-            options = {}
+            options = {},
+            showItemsPerPage = true,
         } = props;
 
         const tableApiRef = useRef<any>(null);
@@ -291,7 +293,7 @@ const DataTableContainer = forwardRef<DataTableRef, DataTableContainerProps>(
             columns: builtColumns,
             rowId,
             language: {
-                lengthMenu: "_MENU_",
+                lengthMenu: showItemsPerPage ? "_MENU_" : "",
                 paginate: {
                     previous: i18n.language === "ar" ? "السابق" : "Previous",
                     next: i18n.language === "ar" ? "التالي" : "Next"

@@ -1,4 +1,4 @@
-import { IQuestion, IReview } from "@@/interfaces/Q&A"
+import { IAnswer, IQuestion, IReview } from "@@/interfaces/Q&A"
 import { actionsName, actionType } from "./actionTypes"
 import { ShamcarRequest } from "@@/common/types/axiosRequest"
 import { JObject } from "@@/common/types/json"
@@ -108,6 +108,50 @@ export const updateReviewStatusSuccess = (data: any): actionType => {
 export const updateReviewStatusFailed = (data: any): actionType => {
     return {
         type: actionsName.UPDATE_REVIEW_STATUS_FAILED,
+        payload: data,
+    }
+}
+//============================================================================
+export const getAllAnswers = (data : any): actionType => {
+    return {
+        type : actionsName.GET_ALL_ANSWERS,
+        payload: data,
+    }
+}
+export const getAllAnswersSuccess = (data : Array<IAnswer>): actionType => {
+    return {
+        type: actionsName.GET_ALL_ANSWERS_SUCCESS,
+        payload: data,
+    }
+}
+export const getAllAnswersFailed = (data : any) : actionType => {
+    return {
+        type: actionsName.GET_ALL_ANSWERS_FAILED,
+        payload: data,
+    }
+}
+export const getAllAnswersCleanUp = () : any => {
+    return {
+        type: actionsName.GET_ALL_ANSWERS_CLEANUP,
+        payload: null,
+    }    
+}
+//============================================================================
+export const addAnswer = (data : ShamcarRequest<JObject>): actionType => {
+    return{
+        type: actionsName.ADD_ANSWER,
+        payload: data,
+    }
+}
+export const addAnswerSuccess = (data : any) : actionType => {
+    return {
+        type: actionsName.ADD_ANSWER_SUCCESS,
+        payload: data,
+    }
+}
+export const addAnswerFailed = (data : any) : actionType => {
+    return {
+        type: actionsName.ADD_ANSWER_FAILED,
         payload: data,
     }
 }

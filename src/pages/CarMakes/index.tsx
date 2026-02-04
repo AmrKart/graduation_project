@@ -27,7 +27,7 @@ const CarMakesPage = () => {
         },
         {
             title: translate("carMake.name"),
-            data: "name",
+            data: "name",            
         },            
     ];
 

@@ -40,6 +40,8 @@ export const GET_ALL_QUESTIONS = "/admin/community/questions";
 export const DELETE_QUESTION = "/admin/community/questions/:id";
 export const DELETE_ANSWER = "/admin/community/answers/:id";
 export const GET_ALL_REVIEWS = "/admin/community/reviews";
+export const GET_ALL_ANSWERS = "/admin/community/questions/:id/answers";
+export const ADD_ANSWER = "/admin/community/questions/:id/answers";
 export const UPDATE_REVIEW_STATUS = "/admin/community/reviews/:id/status";
 //============================Q&A===============================
 //dontRemoveMeUrl

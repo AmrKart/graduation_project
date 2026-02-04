@@ -27,7 +27,16 @@ export enum actionsName {
     UPDATE_REVIEW_STATUS="UPDATE_REVIEW_STATUS",
     UPDATE_REVIEW_STATUS_SUCCESS="UPDATE_REVIEW_STATUS_SUCCESS",
     UPDATE_REVIEW_STATUS_FAILED="UPDATE_REVIEW_STATUS_FAILED",
-    //========================================================    
+    //========================================================
+    GET_ALL_ANSWERS = "GET_ALL_ANSWERS",
+    GET_ALL_ANSWERS_SUCCESS = "GET_ALL_ANSWERS_SUCCESS",
+    GET_ALL_ANSWERS_FAILED = "GET_ALL_ANSWERS_FAILED",
+    GET_ALL_ANSWERS_CLEANUP = "GET_ALL_ANSWERS_CLEANUP",
+    //========================================================
+    ADD_ANSWER = "ADD_ANSWER",
+    ADD_ANSWER_SUCCESS = "ADD_ANSWER_SUCCESS",
+    ADD_ANSWER_FAILED = "ADD_ANSWER_FAILED",
+    //========================================================
 
     //dontRemoveMeNames,
 }

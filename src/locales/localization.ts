@@ -483,6 +483,10 @@ export default {
         en: "Question title",
         ar: "عنوان السؤال"
     },  
+    "questionBody": {
+        en: "Question Body",
+        ar: "محتوى السؤال"
+    },  
     "carName": {
         en: "Car name",
         ar: "اسم المركبة"
@@ -2738,6 +2742,18 @@ export default {
     "trim_name": {
         en: "Trim Name",
         ar: "اسم الفئة"
+    },
+    "answers": {
+        en: "Answers",
+        ar: "الإجابات"
+    },
+    "add.answer": {
+        en: "Add Answer",
+        ar: "إضافة إجابة"
+    },
+    "answer.body": {
+        en: "Answer Body",
+        ar: "محتوى الإجابة"
     },
     "fineBook": {
         en: "Fine book",

@@ -51,3 +51,19 @@ export const jsonToIReview = (data: JObject): IReview => {
         created_at: data.created_at,
     }
 }
+
+export interface IAnswer {
+    id?: string;
+    body?: string;
+    user_name?: string;
+    created_at?: string;
+}
+
+export const jsonToIAnswer = (data : JObject): IAnswer => {
+    return {
+        id: data.id,
+        body: data.body,
+        user_name: data.user_name,
+        created_at: data.created_at,
+    }
+}
