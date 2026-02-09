@@ -11,5 +11,7 @@ export enum ShamcarRoutes {
   CAR_MAKES = '/car-makes',
   REVIEWS = '/reviews',
   QUESTIONS = '/questions',
-  
+  CAR_TRIMS = '/car-trims',
+  ADD_CAR_TRIM = '/car-trims/add',
+  UPDATE_CAR_TRIM = '/car-trims/update/:id',
 }

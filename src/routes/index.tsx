@@ -11,6 +11,8 @@ import CarMakesPage from '@@/pages/CarMakes';
 import CarModelPage from '@@/pages/CarModels';
 import QuestionsPage from '@@/pages/Community/questionsPage';
 import ReviewsPage from '@@/pages/Community/reviewsPage';
+import CarTrimsPage from '@@/pages/CarTrims';
+import AddOrUpdatePage from '@@/pages/CarTrims/helperComponents/AddOrUpdatePage';
 
 
 const authProtectedRoutes = [
@@ -22,6 +24,9 @@ const authProtectedRoutes = [
   { path: ShamcarRoutes.CAR_MODELS, component: <CarModelPage /> },
   { path: ShamcarRoutes.REVIEWS, component: <ReviewsPage /> },
   { path: ShamcarRoutes.QUESTIONS, component: <QuestionsPage /> },
+  { path: ShamcarRoutes.CAR_TRIMS, component: <CarTrimsPage /> },
+  { path: ShamcarRoutes.ADD_CAR_TRIM, component: <AddOrUpdatePage /> },
+  { path: ShamcarRoutes.UPDATE_CAR_TRIM, component: <AddOrUpdatePage /> },
   {
     path: '/*',
     exact: true,

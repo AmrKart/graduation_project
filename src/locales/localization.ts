@@ -479,6 +479,98 @@ export default {
         en: "Car Make Id",
         ar: "معرف الماركة الرئيسية"
     },
+    "carTrim.id": {
+        en: "Id",
+        ar: "معرف الفئة"
+    },
+    "carTrim.name": {
+        en: "Name",
+        ar: "اسم الفئة"
+    },
+    "carTrim.add": {
+        en: "Add Car Trim",
+        ar: "إضافة فئة"
+    },
+    "carTrim.update": {
+        en: "Update Car Trim",
+        ar: "تعديل الفئة"
+    },
+    "carTrims": {
+        en: "Car Trims",
+        ar: "الفئات"
+    },
+    "carTrim.details": {
+        en: "Car Trim details",
+        ar: "معلومات الفئة"
+    },
+    "carTrim.bodyType": {
+        en: "body type",
+        ar: "نوع الجسم"
+    },
+    "carTrim.startProductionYear": {
+        en: "start production year",
+        ar: "سنة الإنتاج"
+    },
+    "carTrim.endProductionYear": {
+        en: "end production year",
+        ar: "سنة الانتهاء"
+    },
+    "carTrim.priceMin": {
+        en: "price min",
+        ar: "السعر الأدنى"
+    },
+    "carTrim.priceMax": {
+        en: "price max",
+        ar: "السعر الأعلى"
+    },
+    "carTrim.currency": {
+        en: "currency",
+        ar: "العملة"
+    },
+    "carTrim.isPublished": {
+        en: "is published",
+        ar: "نشر"
+    },
+    "carTrim.specifications": {
+        en: "specifications",
+        ar: "المواصفات"
+    },
+    "carTrim.add.specifications": {
+        en: "Add Specifications",
+        ar: "إضافة المواصفات"
+    },
+    "carTrim.add.specifications.message": {
+        en: "Please select a car type first",
+        ar: "يرجى تحديد نوع المركبة اولا"
+    },
+    "carTrim.addSpecification": {
+        en: "add specification",
+        ar: "إضافة مواصفة"
+    },
+    "carSpecification.carSpecificationId": {
+        en: "Car specification ID",
+        ar: "معرف المواصفة"
+    },
+    "carSpecification.value": {
+        en: "Value",
+        ar: "القيمة"
+    },
+    "carSpecification.unit": {
+        en: "Unit",
+        ar: "الوحدة"
+    },
+    "carTrim.description": {
+        en: "description",
+        ar: "وصف الفئة"
+    },
+    "carTrim.images": {
+        en: "images",
+        ar: "الصور المرفقة"
+    },
+    "carType.name": {
+        en: "Car Type Name",
+        ar: "اسم نوع المركبة"
+    },
     "questionTitle": {
         en: "Question title",
         ar: "عنوان السؤال"

@@ -5,3 +5,4 @@ export * from "./users/actions";
 export * from "./carMakes/actions";
 export * from "./carModels/action";
 export * from "./Q&A/actions";
+export * from "./carTrims/actions";

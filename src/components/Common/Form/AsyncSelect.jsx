@@ -24,10 +24,10 @@ const AsyncSelect = (props) => {
         setLoading(true);
 
         axios.get(props.url, { error: ErrorMode.message, success: SuccessMode.none }, { params: { pageNumber: 1, pageSize: 1000000000, ...props.preFilter } }).then((response) => {
-            const options = (response?.data?.items ?? []).map((ele) => {
+            const options = (response?.data ?? []).map((ele) => {                
                 return {
                     label: ele[props.label],
-                    value: props.valueKey ? ele[props.valueKey] : ele.id,
+                    value: ele.id,
                     data: ele,
                 };
             });
@@ -54,6 +54,8 @@ const AsyncSelect = (props) => {
 
 
 
+    console.log("data = ", options);
+
     const getValue = () => {
         let data = props.validation;
         let extractedObject = undefined;
@@ -73,22 +75,25 @@ const AsyncSelect = (props) => {
         menu: (provided) => ({
             ...provided,
             zIndex: 9999,
+            backgroundColor: props?.color ?? '#1a1f2e',
         }),
-        control: (base, state) => {
-            return {
-                ...base,
-
-
-                // Removes weird border around container
-                background: state.isDisabled ? '#EFF2F7' : null,
-                ...getBorderColor()
-
-            }
-        },
+        option: (provided, state) => ({
+            ...provided,
+            backgroundColor: state.isFocused ? '#2a3441' : props?.color ?? '#1a1f2e',
+            color: state.isFocused ? '#fff' : provided.color,
+            cursor: 'pointer',
+        }),
+        control: (base, state) => ({
+            ...base,
+            background: state.isDisabled ? '#EFF2F7' : null,
+            ...getBorderColor()
+        }),
+        input: (provided) => ({ ...provided, color: '#1a1f2e' }),
         singleValue: (provided, state) => ({
             ...provided,
-            color: state.isDisabled ? '#495057' : null
-        })
+            color: state.isDisabled ? '#495057' : '#1a1f2e',
+            fontSize: '13px',
+        }),
     };
     return (
         <React.Fragment>

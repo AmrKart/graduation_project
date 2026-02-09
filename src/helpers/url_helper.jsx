@@ -44,6 +44,20 @@ export const GET_ALL_ANSWERS = "/admin/community/questions/:id/answers";
 export const ADD_ANSWER = "/admin/community/questions/:id/answers";
 export const UPDATE_REVIEW_STATUS = "/admin/community/reviews/:id/status";
 //============================Q&A===============================
+
+//============================Car-Trims===============================
+export const GET_CAR_TRIMS = "/admin/car-trims";
+export const GET_CAR_TRIM_DETAILS = "/admin/car-trims/:id";
+export const ADD_CAR_TRIM = "/admin/car-trims";
+export const UPDATE_CAR_TRIM = "/admin/car-trims/:id";
+export const DELETE_CAR_TRIM = "/admin/car-trims/:id";
+export const UPDATE_CAR_TRIM_PUBLISHED = "/admin/car-trims/:id/toggle-published";
+//============================Car-Trims===============================
+
+//============================Support===============================
+export const GET_CAR_TYPES = "/admin/support/types";
+export const GET_CAR_SPECIFICATIONS = "/admin/support/specifications";
+//============================Support===============================
 //dontRemoveMeUrl
 
 

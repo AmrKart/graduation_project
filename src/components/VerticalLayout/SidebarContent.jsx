@@ -229,6 +229,12 @@ const SidebarContent = (props) => {
                   <span>{translate("carMakes")}</span>
                 </Link>
               </li>
+              <li>
+                <Link to={ShamcarRoutes.CAR_TRIMS}>
+                  <i className="bx bx-car"></i>
+                  <span>{translate("carTrims")}</span>
+                </Link>
+              </li>
 
               <li className="menu-title">{translate('community')} </li>
               <li>
