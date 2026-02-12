@@ -11,6 +11,34 @@ import { ICarTrim, jsonToICarTrim } from "@@/interfaces/carTrim"
 import { executeActions } from "@@/helpers/executeActionsHelper"
 
 
+const buildCarTrimFormData = (data: any): FormData => {
+    const formData = new FormData()
+    const entries = Object.entries(data || {})
+
+    console.log("dataForm = ", data);
+
+    for (const [key, value] of entries) {
+        if (value === undefined || value === null) continue
+
+        if (key === "imageFile" && value instanceof File) {
+            // backend can read this as "image"
+            formData.append("image", value)
+        } else if (Array.isArray(value) || typeof value === "object") {
+            formData.append(key, JSON.stringify(value))
+        } else {
+            formData.append(key, String(value))
+        }
+    }
+
+    console.log("formDataamr = ");
+    for (const value of Array.from(formData.values())) {
+        console.log(value);
+      }
+
+    return formData
+}
+
+
 function* getCarTrims(_: SagaPayload<any>) {
     try {
         const response: Response<JObject> = yield call(
@@ -41,10 +69,11 @@ function* getCarTrimDetails(action: SagaPayload<any>) {
 
 function* addCarTrim(action: SagaPayload<ICarTrim>) {
     try {
+        const formData = buildCarTrimFormData(action.payload.data)
         const response: Response<JObject> = yield call(
             axios.post,
             url.ADD_CAR_TRIM,
-            action.payload.data,
+            formData,
             {success: SuccessMode.message, error: ErrorMode.message}
         )
         yield put(actions.addCarTrimSuccess(response.data))
@@ -56,10 +85,11 @@ function* addCarTrim(action: SagaPayload<ICarTrim>) {
 //================================================================
 function* updateCarTrim(action: SagaPayload<ICarTrim>) {
     try {
+        const formData = buildCarTrimFormData(action.payload.data)
         const response: Response<JObject> = yield call(
             axios.put,
             url.UPDATE_CAR_TRIM.replace(":id", action.payload.data?.id ?? ""),
-            action.payload.data,
+            formData,
             {success: SuccessMode.message, error: ErrorMode.message}
         )
         yield put(actions.updateCarTrimSuccess(response.data))

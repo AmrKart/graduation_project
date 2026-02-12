@@ -204,6 +204,12 @@ const SidebarContent = (props) => {
                 </Link>
               </li>
               <li>
+                <Link to={ShamcarRoutes.STATISTICS}>
+                  <i className="bx bx-pie-chart-alt"></i>
+                  <span>{translate("statistics")}</span>
+                </Link>
+              </li>
+              <li>
                 <Link to={ShamcarRoutes.USERS}>
                   <i className="bx bx-user"></i>
                   <span>{translate("users")}</span>

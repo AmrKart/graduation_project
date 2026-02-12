@@ -13,6 +13,7 @@ import QuestionsPage from '@@/pages/Community/questionsPage';
 import ReviewsPage from '@@/pages/Community/reviewsPage';
 import CarTrimsPage from '@@/pages/CarTrims';
 import AddOrUpdatePage from '@@/pages/CarTrims/helperComponents/AddOrUpdatePage';
+import StatisticsPage from '@@/pages/Statistics';
 
 
 const authProtectedRoutes = [
@@ -27,6 +28,7 @@ const authProtectedRoutes = [
   { path: ShamcarRoutes.CAR_TRIMS, component: <CarTrimsPage /> },
   { path: ShamcarRoutes.ADD_CAR_TRIM, component: <AddOrUpdatePage /> },
   { path: ShamcarRoutes.UPDATE_CAR_TRIM, component: <AddOrUpdatePage /> },
+  { path: ShamcarRoutes.STATISTICS, component: <StatisticsPage /> },
   {
     path: '/*',
     exact: true,

@@ -58,6 +58,14 @@ export const UPDATE_CAR_TRIM_PUBLISHED = "/admin/car-trims/:id/toggle-published"
 export const GET_CAR_TYPES = "/admin/support/types";
 export const GET_CAR_SPECIFICATIONS = "/admin/support/specifications";
 //============================Support===============================
+//============================Dashboard Statistics===============================
+export const GET_DASHBOARD_STATISTICS = "/admin/stats";
+export const GET_USER_STATISTICS = "/admin/stats/users";
+export const GET_CAR_STATISTICS = "/admin/stats/cars";
+export const GET_COMMUNITY_STATISTICS = "/admin/stats/community";
+export const GET_ENGAGEMENT_STATISTICS = "/admin/stats/engagement";
+export const GET_ACTIVITY_CHARTS_STATISTICS = "/admin/stats/charts";
+//============================Dashboard Statistics===============================
 //dontRemoveMeUrl
 
 

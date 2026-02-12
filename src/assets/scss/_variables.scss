@@ -11,7 +11,7 @@ $sidebar-menu-sub-item-color: #3D628D;
 $sidebar-menu-item-icon-color: #3D628D;
 $sidebar-menu-item-hover-color: #133964;
 $sidebar-menu-item-active-color: #3D628D;
-$sidebar-menu-item-active-background: #D5E1F2;
+$sidebar-menu-item-active-background: #1a1f2e;
 $sidebar-width:  250px;
 $sidebar-collapsed-width:  70px;
 $sidebar-width-sm:  160px;
@@ -174,6 +174,77 @@ $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
 $min-contrast-ratio:   1.8;
+
+// Statistics page custom helpers
+.statistics-page-title {
+  color: $light;
+}
+
+.statistics-tabs {
+  background-color: rgba($primary, 0.24);
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  display: inline-flex;
+  gap: 0.25rem;
+}
+
+.statistics-tab-link {
+  border-radius: 999px !important;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.8rem;
+  color: $gray-400;
+}
+
+.statistics-tab-link.active {
+  background-color: $primary !important;
+  color: $light !important;
+}
+
+.statistics-kpi-card {
+  background: radial-gradient(circle at top left, lighten($primary, 10%), $primary);
+  border: 0;
+  color: $light;
+  box-shadow: 0 10px 25px rgba($black, 0.35);
+}
+
+.statistics-kpi-label {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.7rem;
+  color: rgba($light, 0.7);
+}
+
+.statistics-kpi-value {
+  font-weight: 600;
+  color: $light;
+}
+
+.statistics-kpi-meta {
+  color: $yellow;
+  font-weight: 500;
+}
+
+.statistics-chart-card {
+  background-color: #1a1f2e;
+  border: 0;
+  box-shadow: 0 10px 25px rgba($black, 0.35);
+}
+
+.statistics-card-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgba($light, 0.8);
+}
+
+.statistics-chart-wrapper {
+  width: 100%;
+  height: 260px;
+}
+
+.statistics-chart-wrapper-lg {
+  height: 300px;
+}
 
 // Customize the light and dark text colors for use in our color contrast function.
 $color-contrast-dark:      $black;
@@ -490,7 +561,7 @@ $body-text-align:           null;
 //
 // Style anchor elements.
 
-$link-color:                              $primary;
+$link-color:                              $yellow-100;
 $link-decoration:                         none;
 $link-shade-percentage:                   20%;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage);

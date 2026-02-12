@@ -14,4 +14,5 @@ export enum ShamcarRoutes {
   CAR_TRIMS = '/car-trims',
   ADD_CAR_TRIM = '/car-trims/add',
   UPDATE_CAR_TRIM = '/car-trims/update/:id',
+  STATISTICS = '/statistics',
 }

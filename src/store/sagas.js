@@ -8,6 +8,7 @@ import carMakesSaga from "./carMakes/saga"
 import carModelsSaga from "./carModels/saga"
 import qaSaga from "./Q&A/saga"
 import carTrimsSaga from "./carTrims/saga"
+import statisticsesSaga from "./Statisticses/saga"
 
 //dontRemoveMeSagaImport
 
@@ -20,5 +21,6 @@ export default function* rootSaga() {
     fork(carModelsSaga),
     fork(qaSaga),
     fork(carTrimsSaga),
+    fork(statisticsesSaga),
   ])
 }

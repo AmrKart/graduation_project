@@ -5254,5 +5254,125 @@ export default {
 
 
 
+    "cars": {
+        en: "Cars",
+        ar: "السيارات"
+    },
+    "no.data": {
+        en: "No data",
+        ar: "لا توجد بيانات"
+    },
+    "registrations": {
+        en: "Registrations",
+        ar: "التسجيلات"
+    },
+    "new.today": {
+        en: "New today",
+        ar: "جديد اليوم"
+    },
+    "new.this.month": {
+        en: "New this month",
+        ar: "جديد هذا الشهر"
+    },
+    "car.makes": {
+        en: "Car makes",
+        ar: "الشركات المصنعة"
+    },
+    "car.models": {
+        en: "Car models",
+        ar: "موديلات السيارات"
+    },
+    "car.trims": {
+        en: "Car trims",
+        ar: "فئات السيارات"
+    },
+    "featured": {
+        en: "Featured",
+        ar: "مميزة"
+    },
+    "engagement": {
+        en: "Engagement",
+        ar: "التفاعل"
+    },
+    "activity.overview": {
+        en: "Activity overview",
+        ar: "نظرة عامة على النشاط"
+    },
+    "users.growth": {
+        en: "Users growth",
+        ar: "نمو المستخدمين"
+    },
+    "active.last.7.days": {
+        en: "Active last 7 days",
+        ar: "النشطون خلال ٧ أيام"
+    },
+    "users.registrations.chart": {
+        en: "Users registrations chart",
+        ar: "مخطط تسجيلات المستخدمين"
+    },
+    "cars.by.body.type": {
+        en: "Trims by body type",
+        ar: "الفئات حسب نوع الهيكل"
+    },
+    "cars.published.chart": {
+        en: "Cars published chart",
+        ar: "مخطط نشر السيارات"
+    },
+    "pending": {
+        en: "Pending",
+        ar: "قيد الانتظار"
+    },
+    "approved": {
+        en: "Approved",
+        ar: "مقبول"
+    },
+    "avg.rating": {
+        en: "Average rating",
+        ar: "متوسط التقييم"
+    },
+    "unanswered": {
+        en: "Unanswered",
+        ar: "غير مجاب"
+    },
+    "reviews.activity.chart": {
+        en: "Reviews activity chart",
+        ar: "مخطط نشاط التقييمات"
+    },
+    "questions.activity.chart": {
+        en: "Questions activity chart",
+        ar: "مخطط نشاط الأسئلة"
+    },
+    "top.rated.trims": {
+        en: "Top rated trims",
+        ar: "أعلى الفئات تقييماً"
+    },
+    "most.reviewed.trims": {
+        en: "Top 10 most reviewed trims",
+        ar: "أكثر 10 فئات تمت مراجعتها"
+    },
+    "most.asked.models": {
+        en: "Top 10 most asked models",
+        ar: "أكثر 10 موديلات تم السؤال عنها"
+    },
+    "most.active.reviewers": {
+        en: "Top 10 most active reviewers",
+        ar: "أكثر 10 مستخدمين نشاطاً في التقييم"
+    },
+    "activity.charts": {
+        en: "Activity charts",
+        ar: "مخططات النشاط"
+    },
+    "statistics": {
+        en: "Statistics",
+        ar: "الإحصاءات"
+    },
+    "overview": {
+        en: "Overview",
+        ar: "نظرة عامة"
+    },
+    "loading": {
+        en: "Loading statistics...",
+        ar: "جاري تحميل الإحصاءات..."
+    }
 }
 

@@ -5,7 +5,6 @@ import React from 'react';
 import { Col, FormGroup, InputProps, Row } from 'reactstrap';
 import { translate } from '@@/locales/translate';
 import upload from '@@/assets/images/icons/BiUpload.svg';
-import ScannerComponent from '../ScannerComponent';
 export interface DargInputProps {
   size?: {
     xl?: string;
@@ -82,16 +81,6 @@ const DargInput = (props: DargInputProps) => {
               )}
             </Dropzone>
           </Col>
-          {!props.hideScanner && (
-            <Col md="6">
-              <ScannerComponent
-                title={translate('files')}
-                onChange={(val) => {
-                  props.onChangeFile(val);
-                }}
-              ></ScannerComponent>
-            </Col>
-          )}
           {props.metaProps?.error ? (
             <React.Fragment>
               <div style={{ color: 'red' }}>{props.metaProps.error}</div>
