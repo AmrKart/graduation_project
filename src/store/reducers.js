@@ -9,6 +9,7 @@ import CarMakes from "./carMakes/reducer"
 import QAReducer from "./Q&A/reducer"
 import CarTrims from "./carTrims/reducer"
 import Statisticses from "./Statisticses/reducer"
+import Settings from "./settings/reducer"
 
 const rootReducer = combineReducers({
   // public
@@ -21,6 +22,7 @@ const rootReducer = combineReducers({
   QAReducer,
   CarTrims,
   Statisticses,
+  Settings
   //dontRemoveMeReduxObject
 })
 

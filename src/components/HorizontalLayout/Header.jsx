@@ -368,7 +368,6 @@ const Header = (props) => {
               </button>
             </div>
 
-            <NotificationDropdown />
 
             <ProfileMenu />
 

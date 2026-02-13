@@ -51,11 +51,26 @@ function* logout(action: SagaPayload<JObject>) {
 
 //================================================================
 
+function* changePassword(action: SagaPayload<JObject>) {
+  try {
+    const response: JObject = yield call(
+      axios.post,
+      url.CHANGEPASSWORD,
+      action.payload.data,
+      { error: ErrorMode.message, success: SuccessMode.message },
+    )
+    yield put(actions.changePasswordSuccess(response.data))
+  } catch (error: any) {
+    yield put(actions.changePasswordFailed(getErrorMessage(error)))
+  }
+}
+
 
 //dontRemoveMe
 function* authenticationSaga() {
   yield takeEvery(actionsName.LOGIN, login)
   yield takeEvery(actionsName.LOGOUT, logout)
+  yield takeEvery(actionsName.CHANGE_PASSWORD, changePassword)
   //dontRemoveMeWatcher
 }
 export default authenticationSaga

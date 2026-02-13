@@ -172,11 +172,6 @@ const Login = (props) => {
 
                           </Button> */}
                         <LoadingButton isLoading={loading} type="submit"> {translate("login.button")}</LoadingButton>
-                        <Button style={{color: 'white', backgroundColor: '#1a1f2e'}} onClick={() => {
-
-                          console.log("123123")
-                          navigate(ShamcarRoutes.REGISTER)
-                        }} className="my-3 btn-soft-primary"> {translate("register")}</Button>
 
 
                       </div>

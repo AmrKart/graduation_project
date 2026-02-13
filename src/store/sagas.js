@@ -9,6 +9,7 @@ import carModelsSaga from "./carModels/saga"
 import qaSaga from "./Q&A/saga"
 import carTrimsSaga from "./carTrims/saga"
 import statisticsesSaga from "./Statisticses/saga"
+import settingsSaga from "./settings/saga"
 
 //dontRemoveMeSagaImport
 
@@ -22,5 +23,6 @@ export default function* rootSaga() {
     fork(qaSaga),
     fork(carTrimsSaga),
     fork(statisticsesSaga),
+    fork(settingsSaga),
   ])
 }

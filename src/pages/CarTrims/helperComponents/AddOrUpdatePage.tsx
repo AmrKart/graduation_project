@@ -25,6 +25,7 @@ import {
   addCarTrim,
   getCarSpecifications,
   getCarTrimDetails,
+  getCarTrimDetailsCleanUp,
   updateCarTrim,
 } from '@@/store/actions';
 import Loader from '@@/components/Common/Loader';
@@ -170,7 +171,10 @@ const AddOrUpdatePage = () => {
     if (id) {
       dispatch(getCarTrimDetails(buildShamcarRequest({ id: id })));
     }
-  }, [id]);
+    return () => {
+      dispatch(getCarTrimDetailsCleanUp());
+    };
+  }, [id, dispatch]);
 
   const { data, loading } = useSelector(
     (state: RootState) => state.CarTrims.singleCarTrim
@@ -206,7 +210,7 @@ const AddOrUpdatePage = () => {
     }),
     initialValues: {
       ...(data || {}),
-      is_published: data?.is_published ?? false,
+      is_published: data?.is_published ?? 0,
       specifications: data?.specifications ?? [],
     },
     onSubmit: (values: any) => {
@@ -300,7 +304,7 @@ const AddOrUpdatePage = () => {
                   inputProps={{
                     placeholder: '',
                     onChange: (e) => {
-                      formik.setFieldValue('is_published', e.target.checked);
+                      formik.setFieldValue('is_published', e.target.checked ? 1 : 0);
                     },
                   }}
                 />

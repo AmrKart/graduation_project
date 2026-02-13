@@ -43,9 +43,9 @@ const ProfileMenu = (props) => {
         </DropdownToggle>
 
         <DropdownMenu className="dropdown-menu-end">
-          <Link to="/profile" className="dropdown-item">
+          <Link to="/change-password" className="dropdown-item">
             <i className="bx bxs-user font-size-16 align-middle me-1 " />
-            <span>{translate("profile")}</span>
+            <span>{translate("changePassword")}</span>
           </Link>
           <Link to="/logout" className="dropdown-item">
             <i className="bx bx-power-off font-size-16 align-middle me-1 text-danger" />

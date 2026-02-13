@@ -4,6 +4,7 @@ export const LOGIN = "/admin/login"
 // export const PROFILE = "/auth/profile"
 export const REFRESH_TOKEN = "/auth/refresh-token"
 export const LOGOUT = "/admin/logout"
+export const CHANGEPASSWORD = "/admin/change-password"
 
 //============================Users===============================
 export const GET_USERS = "/admin/users"
@@ -66,6 +67,13 @@ export const GET_COMMUNITY_STATISTICS = "/admin/stats/community";
 export const GET_ENGAGEMENT_STATISTICS = "/admin/stats/engagement";
 export const GET_ACTIVITY_CHARTS_STATISTICS = "/admin/stats/charts";
 //============================Dashboard Statistics===============================
+
+//============================Settings===============================
+export const GET_ALL_SETTINGS = '/admin/settings';
+export const UPDATE_SETTING = '/admin/settings';
+//============================Setiings===============================
+
+
 //dontRemoveMeUrl
 
 

@@ -160,7 +160,6 @@ const Header = (props) => {
             <LanguageDropdown />
             <div className='mt-1'>
 
-              <NotificationDropdown />
             </div>
 
 

@@ -7,3 +7,4 @@ export * from "./carModels/action";
 export * from "./Q&A/actions";
 export * from "./carTrims/actions";
 export * from "./Statisticses/actions";
+export * from "./settings/actions";

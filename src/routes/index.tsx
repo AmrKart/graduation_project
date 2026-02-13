@@ -14,6 +14,8 @@ import ReviewsPage from '@@/pages/Community/reviewsPage';
 import CarTrimsPage from '@@/pages/CarTrims';
 import AddOrUpdatePage from '@@/pages/CarTrims/helperComponents/AddOrUpdatePage';
 import StatisticsPage from '@@/pages/Statistics';
+import SettingsPage from '@@/pages/Settings';
+import ChangePasswordPage from '@@/pages/ChangePassword';
 
 
 const authProtectedRoutes = [
@@ -29,6 +31,8 @@ const authProtectedRoutes = [
   { path: ShamcarRoutes.ADD_CAR_TRIM, component: <AddOrUpdatePage /> },
   { path: ShamcarRoutes.UPDATE_CAR_TRIM, component: <AddOrUpdatePage /> },
   { path: ShamcarRoutes.STATISTICS, component: <StatisticsPage /> },
+  { path: ShamcarRoutes.SETTINGS, component: <SettingsPage /> },
+  { path: ShamcarRoutes.CHANGE_PASSWORD, component: <ChangePasswordPage /> },
   {
     path: '/*',
     exact: true,

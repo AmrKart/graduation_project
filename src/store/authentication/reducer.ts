@@ -48,7 +48,12 @@ const AuthenticationReducer = (state = INIT_STATE, action: actionType) => {
     case "REFRESH_TOKEN":
       return (state = { ...state, loading: true })
     //================================================================
-
+    case "CHANGE_PASSWORD":
+      return (state = { ...state, actionLoading: true});
+    case "CHANGE_PASSWORD_SUCCESS":
+      return (state = {...state , actionLoading: false});
+    case "CHANGE_PASSWORD_FAILED":
+      return (state = {...state, actionLoading: false});
 
     //dontRemoveMe
 

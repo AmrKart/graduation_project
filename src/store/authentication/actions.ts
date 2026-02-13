@@ -1,4 +1,4 @@
-import { actionType } from "./actionTypes"
+import { actionsName, actionType } from "./actionTypes"
 import { ShamcarRequest } from "@@/common/types/axiosRequest"
 import { JObject } from "@@/common/types/json"
 
@@ -51,5 +51,29 @@ export const refreshAccessToken = (): actionType => {
 
 //================================================================
 
+export const changePassword = (data : any): actionType => {
+  return {
+    type: "CHANGE_PASSWORD",
+    payload: data,
+  }
+}
+export const changePasswordSuccess = (data : any): actionType => {
+  return {
+    type: "CHANGE_PASSWORD_SUCCESS",
+    payload: data,
+  }
+}
+export const changePasswordFailed = (data : any): actionType => {
+  return {
+    type: "CHANGE_PASSWORD_FAILED",
+    payload: data,
+  }
+}
+export const changePasswordCleanUp = () : actionType => {
+  return {
+    type: "CHANGE_PASSWORD_CLEANUP",
+    payload: null,
+  }
+}
 
 //dontRemoveMe

@@ -14,6 +14,13 @@ export const actionsName = {
   REFRESH_TOKEN_SUCCESS: "REFRESH_TOKEN_SUCCESS",
   REFRESH_TOKEN_FAILED: "REFRESH_TOKEN_FAILED",
   //================================================================  
+
+  CHANGE_PASSWORD: "CHANGE_PASSWORD",
+  CHANGE_PASSWORD_SUCESS : "CHANGE_PASSWORD_SUCESS",
+  CHANGE_PASSWORD_FAILED : "CHANGE_PASSWORD_FAILED",
+  CHANGE_PASSWORD_CLEANUP : "CHANGE_PASSWORD_CLEANUP",
+  //================================================================
+
   //dontRemoveMeNames
 }
 
@@ -28,5 +35,9 @@ export type actionType =
   //================================================================
   | { type: "REFRESH_TOKEN"; payload: any }
 //================================================================
+  | {type: "CHANGE_PASSWORD"; payload: any}
+  | {type: "CHANGE_PASSWORD_SUCCESS"; payload: any}
+  | {type: "CHANGE_PASSWORD_FAILED"; payload: any}
+  | {type: "CHANGE_PASSWORD_CLEANUP"; payload: null}
 
 //dontRemoveMeType

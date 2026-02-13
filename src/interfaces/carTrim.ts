@@ -14,7 +14,7 @@ export interface ICarTrim {
     price_min?: string;
     price_max?: string;
     currency?: string;    
-    is_published?: boolean;
+    is_published?: number;
     description?: string;    
     images?: Array<JObject>;     
     specifications?: Array<JObject>;

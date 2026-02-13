@@ -3473,6 +3473,23 @@ export default {
         en: "Image Settings",
         ar: "إعدادات الصورة"
     },
+    "settings": {
+        en: "Settings",
+        ar: "الاعدادات"
+    },
+    "settings.key": {
+        en: "Key",
+        ar: "مفتاح"
+    },
+    "value": {
+        en: "Value",
+        ar: "قيمة"
+    },
+    "title": {
+        en: "Title",
+        ar: "العنوان"
+    },
+
     "brightness": {
         en: "Brightness",
         ar: "السطوع"

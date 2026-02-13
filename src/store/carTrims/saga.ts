@@ -15,8 +15,6 @@ const buildCarTrimFormData = (data: any): FormData => {
     const formData = new FormData()
     const entries = Object.entries(data || {})
 
-    console.log("dataForm = ", data);
-
     for (const [key, value] of entries) {
         if (value === undefined || value === null) continue
 
@@ -30,10 +28,6 @@ const buildCarTrimFormData = (data: any): FormData => {
         }
     }
 
-    console.log("formDataamr = ");
-    for (const value of Array.from(formData.values())) {
-        console.log(value);
-      }
 
     return formData
 }

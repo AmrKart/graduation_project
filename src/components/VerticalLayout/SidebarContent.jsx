@@ -256,6 +256,14 @@ const SidebarContent = (props) => {
                 </Link>
               </li>
 
+              <li className="menu-title">{translate('settings')} </li>
+              <li>
+                <Link to={ShamcarRoutes.SETTINGS}>
+                  <i className="bx bx-brightness"></i>
+                  <span>{translate("settings")}</span>
+                </Link>
+              </li>
+
             </div>
 
 

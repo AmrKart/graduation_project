@@ -44,6 +44,12 @@ export const getCarTrimDetailsFailed = (data: any): actionType => {
         payload: data,
     }
 }
+export const getCarTrimDetailsCleanUp = (): actionType => {
+    return {
+        type: actionsName.GET_CAR_TRIM_DETAILS_CLEANUP,
+        payload: null,
+    }
+}
 export const addCarTrim = (data: any): actionType => {
     return {
         type: actionsName.ADD_CAR_TRIM,

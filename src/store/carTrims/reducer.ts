@@ -54,6 +54,8 @@ const CarTrimsReducer = (state = INIT_STATE, action: actionType) => {
             return (state = { ...state, singleCarTrim: { ...state.singleCarTrim, loading: false, data: action.payload } })
         case actionsName.GET_CAR_TRIM_DETAILS_FAILED:
             return (state = { ...state, singleCarTrim: { ...state.singleCarTrim, loading: false } })
+        case actionsName.GET_CAR_TRIM_DETAILS_CLEANUP:
+            return (state = { ...state, singleCarTrim: { ...INIT_STATE.singleCarTrim } })
         //================================================================
 
         case actionsName.ADD_CAR_TRIM:
